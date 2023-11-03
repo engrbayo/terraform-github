@@ -1,14 +1,10 @@
-resource "aws_instance" "aws_ubuntu" {
-  instance_type          = "t2.micro"
-  ami                    = data.aws_ami.ubuntu.id
-  key_name               = var.key_name
-  user_data              = <<EOF
-  #!/bin/bash
-  sudo apt update -y &&
-  sudo apt install -y nginx
-  echo "Hello World" > /var/www/html/index.html
-  EOF
-}  
+  # key_name               = var.key_name
+  # user_data              = <<EOF
+  # #!/bin/bash
+  # sudo apt update -y &&
+  # sudo apt install -y nginx
+  # echo "Hello World" > /var/www/html/index.html
+  # EOF 
 
 
 # Default VPC
@@ -42,4 +38,12 @@ resource "aws_security_group" "demo_sg" {
     protocol         = "-1"
     cidr_blocks      = ["0.0.0.0/0"]
   }
+}
+
+resource "aws_instance" "aws_ubuntu" {
+  instance_type          = "t2.micro"
+  ami                    = data.aws_ami.ubuntu.id
+  user_data              = file("userdata.tpl")
+  vpc_security_group_ids = ["${aws_security_group.demo_sg.id}"]
+  key_name               = "EC2Instance"
 }
