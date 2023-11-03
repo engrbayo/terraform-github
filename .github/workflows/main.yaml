@@ -34,6 +34,9 @@ jobs:
 
     - name: Initialize Terraform
       run: terraform init
+    
+    - name: Refresh Terraform State
+      run: terraform refresh
 
     - name: Plan
       run: terraform plan
