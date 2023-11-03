@@ -4,8 +4,8 @@ resource "aws_default_vpc" "default" {
 }
 
 # Security group
-resource "aws_security_group" "terraform_demo_sg" {
-  name        = "terraform_demo_sg"
+resource "aws_security_group" "terra_demo_sg" {
+  name        = "terra_demo_sg"
   description = "allow ssh on 22 & http on port 80"
   vpc_id      = aws_default_vpc.default.id
 
@@ -35,6 +35,11 @@ resource "aws_instance" "aws_ubuntu" {
   instance_type          = "t2.micro"
   ami                    = data.aws_ami.ubuntu.id
   user_data              = file("userdata.tpl")
-  vpc_security_group_ids = ["${aws_security_group.terraform_demo_sg.id}"]
+  vpc_security_group_ids = ["${aws_security_group.terra_demo_sg.id}"]
   key_name               = "EC2Instance"
+
+  tags = {
+    Name = "Github_demo_EC2"
+  }
+
 }
