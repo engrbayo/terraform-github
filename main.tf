@@ -38,8 +38,4 @@ resource "aws_instance" "aws_ubuntu" {
   vpc_security_group_ids = ["${aws_security_group.terra_demo_sg.id}"]
   key_name               = "EC2Instance"
 
-  tags = {
-    Name = "Github_demo_EC2"
-  }
-
 }
