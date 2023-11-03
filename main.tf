@@ -1,12 +1,3 @@
-  # key_name               = var.key_name
-  # user_data              = <<EOF
-  # #!/bin/bash
-  # sudo apt update -y &&
-  # sudo apt install -y nginx
-  # echo "Hello World" > /var/www/html/index.html
-  # EOF 
-
-
 # Default VPC
 resource "aws_default_vpc" "default" {
 
