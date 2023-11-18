@@ -17,7 +17,7 @@ permissions:
   issues: write         # write permissions are needed in order to create comments
   id-token: write
 
-concurrency: dev-reinvent    # This wills ensure only a single workflow of merge to master is run at a time
+concurrency: dev-reinvent    # This is ensure only a single workflow of merge to master is run at a time
 
 jobs:
   kics:
