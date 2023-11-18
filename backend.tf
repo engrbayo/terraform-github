@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
-    bucket = "demobucket-s3-test"
+    bucket = "pull-request-action-bucket"
     key    = "path/s3-bucket"
     region = "us-east-1"
-    dynamodb_table = "Git-Table"
+    dynamodb_table = "terraform-table"
   }
 }
