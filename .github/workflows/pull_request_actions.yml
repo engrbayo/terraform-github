@@ -71,7 +71,7 @@ jobs:
         id: plan
         run: |
          terraform plan 
-         terraform show tfplan
+        #  terraform show tfplan
         continue-on-error: true
   apply:
     name: "Terraform Apply"
