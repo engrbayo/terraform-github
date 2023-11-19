@@ -49,7 +49,7 @@ jobs:
           terraform_version: ${{ env.TERRAFORM_VERSION }}
           terraform_wrapper: true
 
-      # - name: Setup Terragrunt
+      # - name: Setuos Terragrunt
       #   uses: autero1/action-terragrunt@v1.2.0
       #   with:
       #     terragrunt_version: ${{ env.TERRAGRUNT_VERSION }}
