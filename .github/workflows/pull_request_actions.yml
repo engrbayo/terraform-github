@@ -13,7 +13,7 @@ env:
   TERRAFORM_WORKING_DIR: './'
 
 permissions:
-  contents: write       # write permissions are needed in order to commit changes back to the branches/
+  contents: write       # write permission are needed in order to commit changes back to the branches/
   issues: write         # write permissions are needed in order to create comments
   id-token: write
 
