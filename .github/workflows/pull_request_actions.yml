@@ -41,7 +41,7 @@ jobs:
       - name: 'Checkout'
         uses: actions/checkout@v3
         with:
-           # This will checkout the branch the PR is coming from in the head repo to avoid checkoing out repo in a detached state
+           # This will checkout the branch the PR is coming from in the head repo to avoid checkoing out repo in a detached state/
            ref: ${{ github.event.pull_request.head.ref }}
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
@@ -49,7 +49,7 @@ jobs:
           terraform_version: ${{ env.TERRAFORM_VERSION }}
           terraform_wrapper: true
 
-      # - name: Setuos Terragrunt
+      # - name: Setuos Terragrunte
       #   uses: autero1/action-terragrunt@v1.2.0
       #   with:
       #     terragrunt_version: ${{ env.TERRAGRUNT_VERSION }}
