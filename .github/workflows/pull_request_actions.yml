@@ -21,7 +21,7 @@ concurrency: dev-reinvent    # This is ensure only a single workflow of merge to
 
 jobs:
   kics:
-    # Kics perform statics codes analysis of Infrastructure of Code (Terraform).
+    # Kics perform statics codes analysis of Infrastructure of Code (Terraform)
     # More details can be found here: https://docs.kics.io/latest/
     name: "Run Kics scan on Terraform code"
     uses: ./.github/workflows/terraform_kics.yml
