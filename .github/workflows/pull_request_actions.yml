@@ -41,7 +41,7 @@ jobs:
       - name: 'Checkout'
         uses: actions/checkout@v3
         with:
-           # This will checkout the branch the PR is coming from in the head repo to avoid checkoing out repo in a detached state/.
+           # This will checkout the branch the PR is coming from in the head repo to avoid checkoing out repo in a detached state/
            ref: ${{ github.event.pull_request.head.ref }}
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
