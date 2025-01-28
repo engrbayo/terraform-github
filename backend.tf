@@ -3,7 +3,7 @@ terraform {
     bucket = "second-sentrick"
     key    = "path/s3-bucket"
     region = "us-east-2"
-    dynamodb_table = "new_db_table"
+    dynamodb_table = "test_table_db"
     #lock = "false"
   }
 }
